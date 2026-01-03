@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Venky</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Step 1 -->
+    <h1 id="title" class="hidden">🎉 Happy Birthday Venky 🎂</h1>
+
+    <!-- Step 2 -->
+    <p id="wish" class="hidden">
+      Wishing you endless happiness and success 💫<br>
+      With love from <b>Suresh & Daya</b> ❤️
+    </p>
+
+    <!-- Step 3 -->
+    <p id="credit" class="hidden">
+      🎬 Video & Idea made by <b>Suresh</b>
+    </p>
+
+    <!-- Step 4 -->
+    <button id="playBtn" class="hidden" onclick="playVideo()">
+      ▶️ Play Birthday Video
+    </button>
+
+    <!-- Video -->
+    <video id="video" controls class="hidden">
+      <source src="venky-birthday.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+
+  </div>
+
+  <script>
+    // Show items one by one
+    setTimeout(() => document.getElementById("title").classList.remove("hidden"), 500);
+    setTimeout(() => document.getElementById("wish").classList.remove("hidden"), 2500);
+    setTimeout(() => document.getElementById("credit").classList.remove("hidden"), 4500);
+    setTimeout(() => document.getElementById("playBtn").classList.remove("hidden"), 6000);
+
+    function playVideo() {
+      document.getElementById("video").classList.remove("hidden");
+      document.getElementById("video").play();
+      document.getElementById("playBtn").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
